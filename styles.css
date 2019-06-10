@@ -109,6 +109,7 @@ a {
     width: 80%;
     border: solid;
     border-image-source: url("imagenes/bordes/borde-acerca.png");
+    text-align: justify;
     border-image-width: 2;
     border-image-slice: 10;
     border-image-repeat: round;
@@ -448,5 +449,20 @@ a {
 
     .punta {
         display: none;
+    }
+    .proyecto{
+        display: block;
+    }
+    .img-proyecto {
+
+    background-color: inherit;
+    width: 100%;
+}
+    .descripcion{
+        width: 100%;
+ 
+    }
+    .title{
+        text-align: center;
     }
 }
