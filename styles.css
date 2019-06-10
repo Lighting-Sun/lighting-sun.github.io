@@ -1,0 +1,472 @@
+@font-face {
+    font-family: Augusta;
+    src: url("fuentes/Augusta.ttf")
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700&subset=cyrillic,latin-ext');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFF3D1;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: #7d1a28;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.header {
+    top: 0;
+
+    position: sticky;
+    background-color: #FFDB8C;
+
+    z-index: 2;
+}
+
+.esconder {
+    display: none;
+}
+
+.nav-princ {
+    padding: 12px 0;
+    height: 50px;
+    margin: auto;
+    width: 60%;
+    background-color: #FFDB8C;
+}
+
+.nav-princ li {
+    font-size: 14pt;
+
+    margin: 0 5%;
+    display: inline-block;
+}
+
+.nav-princ ul,
+li,
+a {
+    background-color: #FFDB8C;
+}
+
+.contenido {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.general {
+    width: 80%;
+    margin: auto;
+
+}
+
+.margen {
+    margin-left: auto;
+    width: 10%;
+    background-color: transparent;
+    background-repeat: repeat-y;
+    background-image: url(imagenes/margen.png);
+    background-position: center;
+    background-size: 50%;
+}
+
+.presentacion {
+    margin: auto;
+    padding: 10px 0;
+    width: 90%;
+    display: flex;
+    flex-flow: row-reverse;
+    /*    border: 5px solid red;*/
+}
+
+.perfil {
+    margin: auto;
+    text-align: center;
+}
+
+.titulo-acerca {
+    font-family: Augusta;
+    font-size: 70pt;
+    color: #330136;
+}
+
+.acerca {
+    margin: auto;
+    width: 80%;
+    border: solid;
+    border-image-source: url("imagenes/bordes/borde-acerca.png");
+    text-align: justify;
+    border-image-width: 2;
+    border-image-slice: 10;
+    border-image-repeat: round;
+    padding: 2%;
+    display: flex;
+
+    font-size: 16pt;
+
+}
+
+.acerca p {
+    margin: auto;
+    width: 50%;
+}
+
+.espada {
+    margin: auto;
+    width: 40%;
+    min-width: 200px;
+    height: auto;
+}
+
+.espada img {
+    width: 100%;
+
+}
+
+.habilidades {
+    margin: auto;
+    width: 30%;
+    z-index: 1;
+}
+
+
+.escudos {
+
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border: 6px solid #7D1A28;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    display: flex;
+
+    background-position: center;
+    background-size: contain;
+
+}
+
+#arr {
+    background-image: url(imagenes/trabajo-equipo.png);
+}
+
+#med {
+    background-image: url(imagenes/autoaprendizaje.png);
+}
+
+#abj {
+    background-image: url(imagenes/logica-creatividad.png);
+}
+
+
+.papel {
+    display: flex;
+    width: 100%;
+    z-index: -1;
+    height: 90%;
+}
+
+.tira-papel {
+    text-align: center;
+    flex-basis: 200px;
+    flex-grow: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+    /*    se usa para poder romper el flex padre*/
+    background-color: #F0D493;
+    z-index: -1;
+    border-bottom-left-radius: 50px;
+    padding: 10px;
+
+}
+
+.papel-resp {
+    display: none;
+}
+
+.tira-papel p {
+    font-size: 12pt;
+    overflow: hidden;
+    background-color: inherit;
+
+    padding: 10px 0;
+    border-top: 5px solid #7D1A28;
+    border-bottom: 5px solid #7D1A28;
+    display: none;
+    width: 60%;
+    margin: 10px 0 0 auto;
+}
+
+.punta {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-basis: 40%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 40%;
+    z-index: -1;
+}
+
+#uno {
+    background-image: url(imagenes/flecha-uno.png);
+}
+
+#dos {
+    background-image: url(imagenes/flecha-dos.png);
+}
+
+#tres {
+
+    background-image: url(imagenes/flecha-tres.png);
+
+}
+
+.papel:hover .tira-papel {
+
+    flex-basis: 120%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+}
+
+.papel:hover .punta {
+
+    cursor: pointer;
+}
+
+
+
+.cont-proyectos {
+    width: 90%;
+    margin: auto;
+}
+
+.titulo-proyectos {
+    margin-top: 10px;
+    font-family: Augusta;
+    font-size: 70pt;
+    color: #330136;
+    text-align: center;
+    border-top: 5px solid #7D1A28;
+    border-bottom: 5px solid #7D1A28;
+}
+
+.borde-ext {
+    margin: 20px 0;
+    padding: 2%;
+    border: solid;
+    border-image-source: url("imagenes/bordes/borde-proy-ext.png");
+    border-image-width: 3;
+    border-image-slice: 10;
+    border-image-repeat: round;
+}
+
+.visor-proyectos {
+
+    border: solid;
+    border-image-source: url("imagenes/bordes/borde-proy-int.png");
+    border-image-width: 3;
+    border-image-slice: 10;
+    border-image-repeat: round;
+
+}
+
+.proyecto {
+
+    margin: 20px 20px;
+    padding: 2%;
+    display: flex;
+    background-color: #ffdb8c;
+    border-radius: 10px;
+}
+
+.descripcion {
+    background-color: inherit;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.descripcion p {
+    font-size: 14pt;
+    background-color: inherit;
+    margin-bottom: 10px;
+}
+
+.descripcion b {
+    font-size: 20pt;
+    background-color: inherit;
+
+}
+
+.img-proyecto {
+
+    background-color: inherit;
+    width: 40%;
+}
+
+.img-proyecto img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.iconos {
+
+    background-color: inherit;
+    display: flex;
+
+}
+
+.iconos img {
+    margin: 0 5px;
+    border-radius: 10%;
+    background-color: #1B2C59;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+/**/
+/*RESPONSIVE*/
+/**/
+/**/
+@media only screen and (max-width: 1300px) {
+    .contenido {
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
+
+    .espada {
+        display: none;
+    }
+
+    .acerca p {
+        margin: auto;
+        width: 100%;
+    }
+
+    .habilidades {
+        margin: auto;
+        width: 30%;
+        z-index: 1;
+    }
+
+    .escudos {
+
+        margin: 20px auto;
+        width: 150px;
+        height: 150px;
+        border: 6px solid #7D1A28;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        display: flex;
+
+        background-position: center;
+        background-size: contain;
+
+    }
+
+    .papel {
+        display: flex;
+        width: 100%;
+        z-index: -1;
+        height: 90%;
+    }
+
+    .tira-papel {
+        text-align: center;
+        flex-basis: 200px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        /*    se usa para poder romper el flex padre*/
+        background-color: #F0D493;
+        z-index: -1;
+        border-bottom-left-radius: 50px;
+        padding: 10px;
+
+    }
+
+}
+
+/**/
+/*RESPONSIVE*/
+/**/
+/**/
+
+
+@media only screen and (max-width: 1100px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .presentacion {
+        display: block;
+    }
+
+    .perfil {
+        display: block;
+    }
+
+    .tira-papel {
+
+        display: block;
+        overflow: visible;
+
+    }
+
+    .papel {
+        display: none;
+    }
+
+    .papel-resp {
+        display: block;
+        text-align: justify;
+        font-size: 15pt;
+    }
+
+    .habilidades {
+        display: block;
+        width: 80%
+    }
+
+    .general {
+        display: block;
+    }
+
+    .punta {
+        display: none;
+    }
+
+    .proyecto {
+        display: block;
+    }
+
+    .img-proyecto {
+
+
+        width: 100%;
+    }
+
+    .descripcion {
+        width: 100%;
+
+    }
+
+    .title {
+        text-align: center;
+    }
+}
